@@ -10,6 +10,7 @@
 #   setsid nohup pipeline/render.sh projects/my-video > render.log 2>&1 &
 set -euo pipefail
 cd "$(dirname "$0")/.."
+[ -d .venv/bin ] && PATH="$PWD/.venv/bin:$PATH"  # setup.sh may have put ffmpeg here
 PROJ=${1:-projects/portfolio-intro}
 SCALE=${SCALE:-1}; FPS=${FPS:-30}; STEP=${STEP:-12}; CRF=${CRF:-16}
 DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$PROJ/audio/voiceover.mp3")

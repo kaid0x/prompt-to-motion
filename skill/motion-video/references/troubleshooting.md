@@ -16,7 +16,8 @@
 | `no ONNX model in models/w2v2` | `python3 pipeline/get_models.py`. It downloads the model from the v0.1.0 release; if that fails it exports it locally (needs `pip install torch transformers`). |
 | `command not found: python` / `pip` (macOS) | Macs only ship `python3`. Run `./setup.sh`, then `source .venv/bin/activate` in each new terminal. |
 | `ModuleNotFoundError: kokoro_onnx` (or numpy, soundfile…) | The venv isn't active. `source .venv/bin/activate`, or re-run `./setup.sh`. |
-| `ffprobe: command not found` | Install ffmpeg (it includes ffprobe): `brew install ffmpeg` on a Mac, `sudo apt install ffmpeg` on Debian/Ubuntu. |
+| `ffprobe: command not found` | Run `./setup.sh` (on Intel Macs it downloads ffmpeg into `.venv/bin`), then `source .venv/bin/activate`. Otherwise install ffmpeg: `brew install ffmpeg` (Apple Silicon), `sudo apt install ffmpeg` (Debian/Ubuntu). |
+| `brew install ffmpeg` builds for ages on an Intel Mac | Homebrew stopped shipping Intel bottles in 2026 and compiles from source. Cancel it and run `./setup.sh`, which fetches a static Intel build. |
 | zsh: `no matches found` or `command not found: #` | You pasted a line with a `# comment` or a glob. Paste the README commands one block at a time, as written. |
 | `waitForFunction: Target page, context or browser has been closed` | Usually run from the wrong folder or with a `PROJECT` that doesn't exist. Run render commands from the repo root as `pipeline/render.sh projects/<name>`. Also happens if the run is interrupted with Ctrl+C. |
 | Kokoro mispronounces a word | `"pronounce": {"Kaido": "Kai-doh"}`, or a per-line `"say"` with the exact text to read. |

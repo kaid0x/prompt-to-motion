@@ -6,6 +6,7 @@
 #   MAX_MB=95 NAME=launch pipeline/finish.sh projects/my-video
 set -euo pipefail
 cd "$(dirname "$0")/.."
+[ -d .venv/bin ] && PATH="$PWD/.venv/bin:$PATH"  # setup.sh may have put ffmpeg here
 PROJ=${1:-projects/portfolio-intro}
 NAME=${NAME:-$(basename "$PROJ")}; MAX_MB=${MAX_MB:-28}
 O="$PROJ/out"

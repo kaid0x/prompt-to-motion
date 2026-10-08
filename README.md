@@ -40,7 +40,7 @@ Four videos, four looks, one kit. Each is a folder in `projects/` plus one scene
 
 ## Quick start
 
-You need [bun](https://bun.sh), Python 3.10–3.13, ffmpeg and Google Chrome. On a Mac: `brew install ffmpeg python@3.12`, then install bun and Chrome.
+You need [bun](https://bun.sh), Python 3.10–3.13, ffmpeg and Google Chrome. `setup.sh` checks for all of them and says what's missing. On an Apple Silicon Mac: `brew install ffmpeg python@3.12`. On an Intel Mac, `brew install python@3.12` is enough: Homebrew no longer has ready-made ffmpeg for Intel, so `setup.sh` downloads a static build for you.
 
 **1. Get it and set it up** (once, ~5 minutes; `setup.sh` checks your tools and tells you what's missing):
 
