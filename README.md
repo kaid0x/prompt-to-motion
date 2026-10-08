@@ -6,7 +6,9 @@
 
 No After Effects, no timeline and no keyframes. The narration *is* the timeline: every spoken word cues the camera, the type, the 3D and the sound.
 
-![A frame from the portfolio intro example](docs/media/hero.jpg)
+https://github.com/user-attachments/assets/84e68a30-6127-4abb-a6f5-9a05320a6d8f
+
+<sub>▶ <b>lumen</b>: a 19-second launch teaser made with this repo from a short brief (voice, 3D, type and sound). More examples below.</sub>
 
 </div>
 
