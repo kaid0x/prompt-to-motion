@@ -6,9 +6,13 @@
 
 No After Effects, no timeline and no keyframes. The narration *is* the timeline: every spoken word cues the camera, the type, the 3D and the sound.
 
-https://github.com/user-attachments/assets/84e68a30-6127-4abb-a6f5-9a05320a6d8f
+https://github.com/user-attachments/assets/2f775787-cb22-42be-9820-58b4e53d2f63
 
-<sub>▶ <b>lumen</b>: a 19-second launch teaser made with this repo from a short brief (voice, 3D, type and sound). More examples below.</sub>
+<sub>▶ <b>starter</b>: the idea in 19 seconds, explained by a video made with this repo.</sub>
+
+https://github.com/user-attachments/assets/d0ed68b3-c9fa-44a2-a319-46248e28d734
+
+<sub>▶ <b>byte-night</b>: a light, editorial data story. Every stat builds itself as it is spoken. More examples below.</sub>
 
 </div>
 
