@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 # One-time setup: checks the tools, creates .venv with the Python packages, installs the app's packages,
-# downloads the two local models, generates the SFX library and, on Intel Macs, fetches ffmpeg.
+# downloads the two local models and generates the SFX library. If ffmpeg is missing it installs one into .venv.
 # Safe to re-run: finished steps are skipped.
 set -e
 cd "$(dirname "$0")"
 ok()   { printf '  \033[32mok\033[0m       %s\n' "$1"; }
 warn() { printf '  \033[33mmissing\033[0m  %s\n' "$1"; }
 fail() { printf '  \033[31mmissing\033[0m  %s\n' "$1"; }
-OS=$(uname -s); ARCH=$(uname -m)
-have_ffmpeg() { { command -v ffmpeg && command -v ffprobe; } >/dev/null 2>&1 || [ -x .venv/bin/ffprobe ]; }
+have_ffmpeg() { command -v ffmpeg >/dev/null 2>&1 || [ -x .venv/bin/ffmpeg ]; }
 
 echo "Checking tools"
 BLOCKED=0
@@ -25,8 +24,7 @@ if [ -n "$PY" ]; then ok "$($PY --version 2>&1) ($PY)"
 else fail "Python 3.10-3.13 (found: $(python3 --version 2>&1 || echo none)). macOS: brew install python@3.12   Linux: sudo apt install python3.12 python3.12-venv"; BLOCKED=1; fi
 
 if have_ffmpeg; then ok "ffmpeg"
-elif [ "$OS" = Darwin ] && [ "$ARCH" = x86_64 ]; then warn "ffmpeg: will download a ready-made Intel build below"
-else warn "ffmpeg: macOS: brew install ffmpeg   Linux: sudo apt install ffmpeg"; fi
+else warn "ffmpeg: will install one into .venv below (from the imageio-ffmpeg package)"; fi
 
 CHROME=0
 if [ -n "$CHROME_PATH" ] && [ -x "$CHROME_PATH" ]; then ok "Chrome (CHROME_PATH)"; CHROME=1
@@ -45,20 +43,14 @@ fi
 .venv/bin/python -m pip install -q -r requirements.txt
 ok "installed"
 
-if ! have_ffmpeg && [ "$OS" = Darwin ] && [ "$ARCH" = x86_64 ]; then
-  # Homebrew no longer ships bottles for Intel Macs (it compiles from source, which takes very long).
-  # evermeet.cx hosts static Intel macOS builds of ffmpeg, linked from ffmpeg.org's download page.
-  echo; echo "ffmpeg (static Intel macOS build from evermeet.cx, into .venv/bin)"
-  TMP=$(mktemp -d)
-  for tool in ffmpeg ffprobe; do
-    url="https://evermeet.cx/ffmpeg/getrelease/zip"; [ "$tool" = ffprobe ] && url="https://evermeet.cx/ffmpeg/getrelease/ffprobe/zip"
-    curl -fsSL --retry 3 -o "$TMP/$tool.zip" "$url"
-    unzip -oq "$TMP/$tool.zip" -d "$TMP"
-    mv -f "$TMP/$tool" ".venv/bin/$tool"; chmod +x ".venv/bin/$tool"
-    xattr -d com.apple.quarantine ".venv/bin/$tool" 2>/dev/null || true
-  done
-  rm -rf "$TMP"
-  .venv/bin/ffprobe -version >/dev/null && ok "$(.venv/bin/ffmpeg -version | head -1 | cut -d' ' -f1-3)"
+if ! have_ffmpeg; then
+  # A static ffmpeg build (with x264 and mp3) from PyPI, so no Homebrew needed. Homebrew no longer ships
+  # bottles for Intel Macs and compiles ffmpeg from source there, which takes a very long time.
+  echo; echo "ffmpeg (imageio-ffmpeg package, into .venv/bin)"
+  .venv/bin/python -m pip install -q imageio-ffmpeg
+  FF=$(.venv/bin/python -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())")
+  ln -sf "$FF" .venv/bin/ffmpeg
+  .venv/bin/ffmpeg -version >/dev/null && ok "$(.venv/bin/ffmpeg -version | head -1 | cut -d' ' -f1-3)"
 fi
 
 echo; echo "App packages"

@@ -13,7 +13,7 @@ O="$PROJ/out"
 (cd "$O/chunks" && ls c*.mp4 | sed "s/^/file '/;s/$/'/" > list.txt)
 ffmpeg -v error -y -f concat -safe 0 -i "$O/chunks/list.txt" -c copy "$O/picture.mp4"
 AUD="$O/mix.m4a"; [ -f "$AUD" ] || AUD="$PROJ/audio/voiceover.mp3"
-DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$O/picture.mp4")
+DUR=$(python3 pipeline/duration.py "$O/picture.mp4")
 # video bitrate that lands at MAX_MB with 160k audio and ~3% container overhead (capped at 12 Mb/s)
 VB=$(python3 -c "print(min(12000, int(($MAX_MB*8*1024*0.97/$DUR) - 160)))")
 P="$O/x264pass"

@@ -19,6 +19,8 @@ import json, subprocess, sys, wave
 from pathlib import Path
 import numpy as np
 from scipy.signal import lfilter
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from duration import duration
 
 REPO = Path(__file__).resolve().parent.parent
 proj = Path(sys.argv[1] if len(sys.argv) > 1 else "projects/portfolio-intro").resolve()
@@ -26,7 +28,7 @@ SR = 44100
 cfg = json.loads((proj / "sfx.json").read_text()) if (proj / "sfx.json").exists() else {}
 words = [w for l in json.loads((proj / "data/lyrics.json").read_text())["lines"] for w in l["words"]]
 cues_line = json.loads((proj / "data/cues.json").read_text()).get("cues", {}) if (proj / "data/cues.json").exists() else {}
-D = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(proj / "audio/voiceover.mp3")], capture_output=True, text=True).stdout)
+D = duration(str(proj / "audio/voiceover.mp3"))
 
 
 def norm(s): return "".join(c for c in s.lower() if c.isalnum() or c in "'*+%")

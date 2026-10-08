@@ -40,7 +40,7 @@ source .venv/bin/activate
 `setup.sh` checks for bun, python3, ffmpeg and Chrome, makes a Python venv in `.venv/`, installs
 `requirements.txt` and the app's packages, downloads the Kokoro TTS + wav2vec2 aligner models (~215 MB, CPU)
 and generates the royalty-free SFX library in `sfx/`. Run `source .venv/bin/activate` in every new terminal
-before the `python3 pipeline/…` commands. On a Mac, missing tools come from `brew install ffmpeg python@3.12` (Intel Macs: only `python@3.12`; setup.sh downloads ffmpeg).
+before the `python3 pipeline/…` commands. If ffmpeg is missing, setup.sh installs one into `.venv/bin` (no Homebrew needed); on a Mac, `brew install python@3.12` if Python is outside 3.10–3.13.
 On Linux servers, set `CHROME_PATH=/path/to/chrome`.
 
 ### 1. The brief
