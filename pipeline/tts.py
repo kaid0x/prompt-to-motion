@@ -1,8 +1,8 @@
 """Narration from script.json with Kokoro (local, free, Apache-2.0), one clip per line with the line's
 pause after it, so the timeline knows exactly where each line starts.
 
-    python pipeline/tts.py projects/my-video                 # voice from script.json
-    python pipeline/tts.py projects/my-video --voice af_heart
+    python3 pipeline/tts.py projects/my-video                 # voice from script.json
+    python3 pipeline/tts.py projects/my-video --voice af_heart
 
 Writes <project>/audio/voiceover.mp3 and <project>/data/cues.json:
     { duration, plates: [[scene_id, start_s], ...], cues: { line_id: [start, end] } }

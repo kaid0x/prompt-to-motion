@@ -1,15 +1,15 @@
-"""Download the two local models the pipeline uses (once, ~170 MB total). Both run on CPU.
+"""Download the two local models the pipeline uses (once, ~215 MB total). Both run on CPU.
 
   models/kokoro/   Kokoro-82M TTS, int8 ONNX + voices         (Apache-2.0, github.com/thewh1teagle/kokoro-onnx)
   models/w2v2/     wav2vec2-base-960h CTC aligner, ONNX + vocab (Apache-2.0, facebook/wav2vec2-base-960h)
 
-    python pipeline/get_models.py            # both
-    python pipeline/get_models.py kokoro     # just one
+    python3 pipeline/get_models.py            # both
+    python3 pipeline/get_models.py kokoro     # just one
 
-The aligner is exported from the Hugging Face checkpoint with PyTorch the first time (needs
-`pip install torch transformers`); after that only onnxruntime is needed.
+The aligner downloads from this repo's v0.1.0 release. If that fails, it is exported from the Hugging Face
+checkpoint instead, which needs `pip install torch transformers` once.
 """
-import json, sys, urllib.request
+import json, subprocess, sys, urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -22,7 +22,11 @@ def fetch(url: str, dst: Path):
     dst.parent.mkdir(parents=True, exist_ok=True)
     print(f"get  {url}")
     tmp = dst.with_suffix(dst.suffix + ".part")
-    urllib.request.urlretrieve(url, tmp)
+    try:
+        urllib.request.urlretrieve(url, tmp)
+    except Exception as e:  # noqa: BLE001  python.org builds on macOS often lack SSL certificates; curl has them
+        print(f"     urllib failed ({e}), retrying with curl")
+        subprocess.run(["curl", "-fL", "--retry", "3", "-o", str(tmp), url], check=True)
     tmp.rename(dst)
 
 
@@ -33,24 +37,22 @@ if "kokoro" in want:
 
 if "w2v2" in want:
     out = REPO / "models/w2v2"
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "vocab.json").write_text((REPO / "pipeline/w2v2_vocab.json").read_text())
     if list(out.glob("*.onnx")):
         print("have models/w2v2/*.onnx")
     else:
-        import torch
-        from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
-        name = "facebook/wav2vec2-base-960h"
-        print(f"export {name} -> ONNX")
-        out.mkdir(parents=True, exist_ok=True)
-        proc = Wav2Vec2Processor.from_pretrained(name)
-        model = Wav2Vec2ForCTC.from_pretrained(name).eval()
-        (out / "vocab.json").write_text(json.dumps(proc.tokenizer.get_vocab()))
-        x = torch.zeros(1, 16000)
-        torch.onnx.export(model, (x,), str(out / "w2v2_base_960h.onnx"), input_names=["input_values"], output_names=["logits"],
-                          dynamic_axes={"input_values": {0: "batch", 1: "samples"}, "logits": {0: "batch", 1: "frames"}}, opset_version=17)
-        try:  # 4x smaller, same alignments
-            from onnxruntime.quantization import quantize_dynamic, QuantType
-            quantize_dynamic(str(out / "w2v2_base_960h.onnx"), str(out / "w2v2_base_960h_q.onnx"), weight_type=QuantType.QUInt8)
-            (out / "w2v2_base_960h.onnx").unlink()
+        # a quantized ONNX export of facebook/wav2vec2-base-960h (Apache-2.0), attached to the v0.1.0 release
+        try:
+            fetch("https://github.com/kaid0x/prompt-to-motion/releases/download/v0.1.0/w2v2_base_960h_q.onnx", out / "w2v2_base_960h_q.onnx")
         except Exception as e:  # noqa: BLE001
-            print("quantization skipped:", e)
+            print("release download failed (", e, "): exporting from Hugging Face instead (needs: pip install torch transformers)")
+            import torch
+            from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
+            name = "facebook/wav2vec2-base-960h"
+            proc = Wav2Vec2Processor.from_pretrained(name)
+            model = Wav2Vec2ForCTC.from_pretrained(name).eval()
+            (out / "vocab.json").write_text(json.dumps(proc.tokenizer.get_vocab()))
+            torch.onnx.export(model, (torch.zeros(1, 16000),), str(out / "w2v2_base_960h.onnx"), input_names=["input_values"], output_names=["logits"],
+                              dynamic_axes={"input_values": {0: "batch", 1: "samples"}, "logits": {0: "batch", 1: "frames"}}, opset_version=17)
 print("models ready")

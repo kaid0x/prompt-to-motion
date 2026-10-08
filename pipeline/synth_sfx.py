@@ -2,7 +2,7 @@
 whooshes, impacts, risers, glitches, UI blips, typing, a chime, a stamp, a scanner sweep, shattering glass.
 Deterministic (seeded), so everyone who runs it gets the same files.
 
-    python pipeline/synth_sfx.py          # -> sfx/*.wav (44.1 kHz stereo)
+    python3 pipeline/synth_sfx.py          # -> sfx/*.wav (44.1 kHz stereo)
 """
 from pathlib import Path
 import numpy as np

@@ -112,7 +112,7 @@ inOutQuart, outBack, outExpo…), `lerp`, `clamp`, `hash(i, seed)` a determinist
   "colors": {"ink": "#0A0D12", "signal": "#FF4044", "…": "…"},
   "fonts": {"display": "Chakra", "mono": "JBM", "body": "PlexSans"} }
 ```
-**sfx.json**: see the header of `pipeline/mix.py`. The SFX library (`python pipeline/synth_sfx.py`) has
+**sfx.json**: see the header of `pipeline/mix.py`. The SFX library (`python3 pipeline/synth_sfx.py`) has
 whoosh_soft, whoosh_fast, impact, hit_small, riser, reverse, glitch, blip, blip_low, tick, typing, chime, stamp, scan, zap and shatter.
 
 ## Render CLI (from `app/`, with `PROJECT=projects/<name>`)

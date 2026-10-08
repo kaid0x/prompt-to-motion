@@ -2,7 +2,7 @@
 voice onsets (word starts, if data/lyrics.json exists) and a nominal 120 BPM grid (narration has no beat;
 the grid only feeds generic helpers).
 
-    python pipeline/analyze_audio.py projects/my-video
+    python3 pipeline/analyze_audio.py projects/my-video
 """
 import json, subprocess, sys
 from pathlib import Path

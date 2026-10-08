@@ -1,7 +1,7 @@
 """The soundtrack: narration + a synthesized music bed (drone, sub pulse, swells into big moments) + SFX
 cues, all timed to WORDS from data/lyrics.json. Writes <project>/out/mix.m4a (-14 LUFS, web standard).
 
-    python pipeline/mix.py projects/my-video
+    python3 pipeline/mix.py projects/my-video
 
 <project>/sfx.json (every key optional):
 {
@@ -13,7 +13,7 @@ cues, all timed to WORDS from data/lyrics.json. Writes <project>/out/mix.m4a (-1
 }
 Times: seconds, "word:ghidra" (start of the first word starting with "ghidra"), "word:break#1" (the second
 one), "wordend:injection", "line:hook" (a line id from data/cues.json), "end" (end of the audio).
-SFX names are the files in sfx/ (python pipeline/synth_sfx.py), or a path to your own file.
+SFX names are the files in sfx/ (python3 pipeline/synth_sfx.py), or a path to your own file.
 """
 import json, subprocess, sys, wave
 from pathlib import Path
@@ -97,7 +97,7 @@ fl = ["[0:a]aresample=44100,aformat=channel_layouts=stereo,highpass=f=70,acompre
       "[bedr][sc]sidechaincompress=threshold=0.03:ratio=4:attack=20:release=350[bed]"]
 for i, c in enumerate(cue):
     src = Path(c["sfx"]) if "/" in c["sfx"] else REPO / "sfx" / f"{c['sfx']}.wav"
-    if not src.exists(): sys.exit(f"missing sfx {src} (run python pipeline/synth_sfx.py)")
+    if not src.exists(): sys.exit(f"missing sfx {src} (run python3 pipeline/synth_sfx.py)")
     a += ["-i", str(src)]
     ms = max(0, int((T(c["at"]) + float(c.get("offset", 0))) * 1000))
     fl.append(f"[{i + 2}:a]aformat=sample_rates=44100:channel_layouts=stereo,volume={c.get('db', -14)}dB,adelay={ms}|{ms}[s{i}]")

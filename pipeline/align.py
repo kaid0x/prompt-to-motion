@@ -4,7 +4,7 @@ A character-level CTC model (wav2vec2-base-960h, ONNX) gives per-frame log-proba
 The whole script's spoken characters are aligned in ONE Viterbi pass, so a long read never drifts. Each
 display word then gets the span of its characters. Works for any voice: TTS, ElevenLabs, your own mic.
 
-    python pipeline/align.py projects/my-video            # uses models/w2v2/*.onnx (pipeline/get_models.py)
+    python3 pipeline/align.py projects/my-video            # uses models/w2v2/*.onnx (pipeline/get_models.py)
 
 Reads  <project>/script.json (lines[].text, optional "pronounce") and <project>/audio/voiceover.mp3
 Writes <project>/data/lyrics.json: { lines: [{ text, start, end, words: [{ w, start, end }] }] }
@@ -33,7 +33,7 @@ def emissions(y: np.ndarray) -> np.ndarray:
     """Log-softmax CTC emissions [T, V], computed in 30 s windows with 1 s overlap."""
     model = sorted(MODEL_DIR.glob("*.onnx"))
     if not model:
-        sys.exit(f"no ONNX model in {MODEL_DIR}: run python pipeline/get_models.py")
+        sys.exit(f"no ONNX model in {MODEL_DIR}: run python3 pipeline/get_models.py")
     sess = ort.InferenceSession(str(model[0]), providers=["CPUExecutionProvider"])
     win, ov = 30 * SR, 1 * SR
     out, pos = [], 0

@@ -40,21 +40,38 @@ Four videos, four looks, one kit. Each is a folder in `projects/` plus one scene
 
 ## Quick start
 
-Requirements: [bun](https://bun.sh), Python 3.10+, ffmpeg, Google Chrome.
+You need [bun](https://bun.sh), Python 3.10–3.13, ffmpeg and Google Chrome. On a Mac: `brew install ffmpeg python@3.12`, then install bun and Chrome.
+
+**1. Get it and set it up** (once, ~5 minutes; `setup.sh` checks your tools and tells you what's missing):
 
 ```sh
-git clone https://github.com/kaid0x/prompt-to-motion && cd prompt-to-motion
-cd app && bun install && cd ..
-pip install onnxruntime kokoro-onnx soundfile numpy scipy
-python pipeline/get_models.py          # local TTS + aligner, CPU only
-python pipeline/synth_sfx.py           # royalty-free SFX -> sfx/
-
-# preview the example in the browser (space = play, ←/→ = seek)
-cd app && bunx vite
-
-# render it
-cd .. && pipeline/render.sh projects/portfolio-intro && python pipeline/mix.py projects/portfolio-intro && pipeline/finish.sh projects/portfolio-intro
+git clone https://github.com/kaid0x/prompt-to-motion
+cd prompt-to-motion
+./setup.sh
 ```
+
+**2. Activate the Python environment** (in every new terminal, from the repo folder):
+
+```sh
+source .venv/bin/activate
+```
+
+**3. Preview an example in the browser.** Open http://localhost:5173 and press space to play, ←/→ to seek. Press Ctrl+C to stop.
+
+```sh
+cd app
+PROJECT=projects/lumen bunx vite
+```
+
+**4. Render it to an MP4** (from the repo folder, not `app`). The finished file lands in `projects/lumen/out/lumen.mp4`.
+
+```sh
+pipeline/render.sh projects/lumen
+python3 pipeline/mix.py projects/lumen
+pipeline/finish.sh projects/lumen
+```
+
+Swap `lumen` for `portfolio-intro`, `byte-night` or `starter` to see the others.
 
 ### With Claude (recommended)
 Install the skill: copy `skill/motion-video/` into `~/.claude/skills/` (Claude Code), or upload the folder as a skill in Claude.
@@ -65,15 +82,37 @@ Open this repo and ask:
 Claude writes `projects/<name>/script.json`, `brand.json` and a scene, then checks contact sheets of every beat before rendering and sends you the MP4. See [example prompts](skill/motion-video/references/prompts.md).
 
 ### By hand
+
+Copy the starter project and its scene, then edit `projects/my-video/script.json` (the words, and `"plates": [["my_video", "hook"]]`) and `brand.json` (colours, fonts):
+
 ```sh
-cp -r projects/starter projects/my-video                 # edit script.json + brand.json
-cp app/src/scenes/starter.ts app/src/scenes/my_video.ts  # set "plates": [["my_video", "hook"]]
-python pipeline/tts.py projects/my-video                 # or drop your own audio/voiceover.mp3
-python pipeline/align.py projects/my-video               # word timings
-python pipeline/analyze_audio.py projects/my-video
-cd app && PROJECT=projects/my-video bunx vite            # live preview while you edit the scene
+cp -r projects/starter projects/my-video
+cp app/src/scenes/starter.ts app/src/scenes/my_video.ts
+```
+
+Make the voice and word timings (or put your own recording in `projects/my-video/audio/voiceover.mp3` and skip `tts.py`):
+
+```sh
+python3 pipeline/tts.py projects/my-video
+python3 pipeline/align.py projects/my-video
+python3 pipeline/analyze_audio.py projects/my-video
+```
+
+Edit `app/src/scenes/my_video.ts` with a live preview, and check stills of chosen moments as a contact sheet:
+
+```sh
+cd app
+PROJECT=projects/my-video bunx vite
 PROJECT=projects/my-video bun scripts/render.ts sheet --times 2,5,9,14 --cols 4 --out ../sheet.png
-cd .. && pipeline/render.sh projects/my-video && python pipeline/mix.py projects/my-video && pipeline/finish.sh projects/my-video
+cd ..
+```
+
+Render, mix and export:
+
+```sh
+pipeline/render.sh projects/my-video
+python3 pipeline/mix.py projects/my-video
+pipeline/finish.sh projects/my-video
 ```
 
 ## How it works
@@ -90,7 +129,7 @@ render.sh ─▶ headless Chrome renders frames ─▶ ffmpeg chunks ─▶ fini
 sfx.json ──mix.py──▶ bed + sub hits + swells + SFX on words, ducked under the voice
 ```
 
-A scene says *what happens on which word*:
+A scene says *what happens on which word* (TypeScript inside a scene file, not a terminal command):
 
 ```ts
 // the core cracks open as the narrator says "break"

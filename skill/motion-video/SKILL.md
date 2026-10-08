@@ -34,12 +34,14 @@ covers errors. These files sit next to this SKILL.md, and in the repo at `skill/
 
 ### 0. Set up (once per machine)
 ```sh
-cd app && bun install && cd ..
-pip install onnxruntime kokoro-onnx soundfile numpy scipy
-python pipeline/get_models.py      # Kokoro TTS + wav2vec2 aligner (~170 MB, CPU)
-python pipeline/synth_sfx.py       # royalty-free SFX library -> sfx/
+./setup.sh
+source .venv/bin/activate
 ```
-You also need ffmpeg and Chrome. On Linux servers, set `CHROME_PATH=/path/to/chrome`.
+`setup.sh` checks for bun, python3, ffmpeg and Chrome, makes a Python venv in `.venv/`, installs
+`requirements.txt` and the app's packages, downloads the Kokoro TTS + wav2vec2 aligner models (~215 MB, CPU)
+and generates the royalty-free SFX library in `sfx/`. Run `source .venv/bin/activate` in every new terminal
+before the `python3 pipeline/…` commands. On a Mac, missing tools come from `brew install ffmpeg python@3.12`.
+On Linux servers, set `CHROME_PATH=/path/to/chrome`.
 
 ### 1. The brief
 Settle these from the prompt and any links or files the user gives. Ask only about what you can't infer.
@@ -59,9 +61,9 @@ Settle these from the prompt and any links or files the user gives. Ask only abo
 
 ### 3. Voice, timings, envelopes
 ```sh
-python pipeline/tts.py projects/<name>          # skip if the user supplies a voice file
-python pipeline/align.py projects/<name>        # -> data/lyrics.json (check the printout!)
-python pipeline/analyze_audio.py projects/<name>
+python3 pipeline/tts.py projects/<name>          # skip if the user supplies a voice file
+python3 pipeline/align.py projects/<name>        # -> data/lyrics.json (check the printout!)
+python3 pipeline/analyze_audio.py projects/<name>
 ```
 Read align's printout. Every word should land in order with plausible gaps. If a name is off, add it to
 `pronounce` and re-run. **With a user-supplied file** (ElevenLabs, say): pad it to ~0.8 s lead and ~2.5 s tail
@@ -111,7 +113,7 @@ skipped, so re-running resumes. Tell the user the ETA and that a new message mig
 ### 8. Sound
 Write `projects/<name>/sfx.json` (bed, pulse, hits, swells, cues on words; see scene-api.md), then:
 ```sh
-python pipeline/mix.py projects/<name>       # -> out/mix.m4a, -14 LUFS, bed ducked under the voice
+python3 pipeline/mix.py projects/<name>       # -> out/mix.m4a, -14 LUFS, bed ducked under the voice
 ```
 Keep SFX 8–20 dB under the voice. Put whooshes 0.3 s *before* a camera move, impacts *on* the word, and risers ending *on* it.
 

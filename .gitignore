@@ -5,3 +5,4 @@ projects/*/audio/narration.wav
 **/__pycache__/
 .DS_Store
 *.part
+.venv/
