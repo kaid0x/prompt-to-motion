@@ -1,0 +1,13 @@
+{
+ "voice": { "engine": "kokoro", "voice": "am_michael", "speed": 1.0 },
+ "lead": 0.8,
+ "pronounce": {},
+ "lines": [
+  { "id": "hook", "text": "This video was never edited. It was written.", "pause": 0.5 },
+  { "id": "code", "text": "Every frame is code: a pure function of time.", "pause": 0.45 },
+  { "id": "cue", "text": "The narration is the timeline. Each word cues the camera, the type, and the light.", "pause": 0.5 },
+  { "id": "how", "text": "Write a script. Pick a voice. Render.", "pause": 0.5 },
+  { "id": "end", "text": "Prompt to motion.", "pause": 2.6 }
+ ],
+ "plates": [["starter", "hook"]]
+}

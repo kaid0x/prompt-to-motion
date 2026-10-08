@@ -1,0 +1,10 @@
+{
+ "name": "prompt-to-motion",
+ "handle": "p2m",
+ "url": "github.com/kaid0x/prompt-to-motion",
+ "colors": {
+  "ink": "#07090D", "ink2": "#10141C", "graphite": "#273041", "ash": "#8C96A8", "bone": "#EEF1F6",
+  "signal": "#4C8DFF", "ember": "#A9C8FF", "blood": "#2552C9", "acid": "#FFC857"
+ },
+ "fonts": { "display": "Chakra", "mono": "JBM", "body": "PlexSans" }
+}

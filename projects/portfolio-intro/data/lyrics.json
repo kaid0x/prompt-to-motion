@@ -1,0 +1,583 @@
+{
+ "source": "pipeline/align.py (wav2vec2 CTC)",
+ "lines": [
+  {
+   "text": "Most people use systems. I break them, to see how they hold together.",
+   "start": 0.94,
+   "end": 5.08,
+   "words": [
+    {
+     "w": "Most",
+     "start": 0.94,
+     "end": 1.16
+    },
+    {
+     "w": "people",
+     "start": 1.2,
+     "end": 1.52
+    },
+    {
+     "w": "use",
+     "start": 1.66,
+     "end": 1.8
+    },
+    {
+     "w": "systems.",
+     "start": 1.86,
+     "end": 2.26
+    },
+    {
+     "w": "I",
+     "start": 2.9,
+     "end": 2.96
+    },
+    {
+     "w": "break",
+     "start": 3.04,
+     "end": 3.28
+    },
+    {
+     "w": "them,",
+     "start": 3.34,
+     "end": 3.5
+    },
+    {
+     "w": "to",
+     "start": 3.6,
+     "end": 3.72
+    },
+    {
+     "w": "see",
+     "start": 3.76,
+     "end": 3.94
+    },
+    {
+     "w": "how",
+     "start": 4.0,
+     "end": 4.14
+    },
+    {
+     "w": "they",
+     "start": 4.2,
+     "end": 4.36
+    },
+    {
+     "w": "hold",
+     "start": 4.42,
+     "end": 4.66
+    },
+    {
+     "w": "together.",
+     "start": 4.68,
+     "end": 5.08
+    }
+   ]
+  },
+  {
+   "text": "I'm Muhammad Haseeb Ashfaq. Online, I'm Kaido.",
+   "start": 5.78,
+   "end": 8.84,
+   "words": [
+    {
+     "w": "I'm",
+     "start": 5.78,
+     "end": 5.88
+    },
+    {
+     "w": "Muhammad",
+     "start": 5.9,
+     "end": 6.36
+    },
+    {
+     "w": "Haseeb",
+     "start": 6.36,
+     "end": 6.74
+    },
+    {
+     "w": "Ashfaq.",
+     "start": 6.9,
+     "end": 7.24
+    },
+    {
+     "w": "Online,",
+     "start": 7.82,
+     "end": 8.24
+    },
+    {
+     "w": "I'm",
+     "start": 8.34,
+     "end": 8.44
+    },
+    {
+     "w": "Kaido.",
+     "start": 8.54,
+     "end": 8.84
+    }
+   ]
+  },
+  {
+   "text": "A Year 13 student in Dubai, where offensive security meets AI.",
+   "start": 9.38,
+   "end": 13.72,
+   "words": [
+    {
+     "w": "A",
+     "start": 9.38,
+     "end": 9.44
+    },
+    {
+     "w": "Year",
+     "start": 9.44,
+     "end": 9.64
+    },
+    {
+     "w": "13",
+     "start": 9.72,
+     "end": 10.16
+    },
+    {
+     "w": "student",
+     "start": 10.24,
+     "end": 10.66
+    },
+    {
+     "w": "in",
+     "start": 10.66,
+     "end": 10.74
+    },
+    {
+     "w": "Dubai,",
+     "start": 10.8,
+     "end": 11.18
+    },
+    {
+     "w": "where",
+     "start": 11.64,
+     "end": 11.8
+    },
+    {
+     "w": "offensive",
+     "start": 11.8,
+     "end": 12.28
+    },
+    {
+     "w": "security",
+     "start": 12.32,
+     "end": 12.92
+    },
+    {
+     "w": "meets",
+     "start": 12.98,
+     "end": 13.22
+    },
+    {
+     "w": "AI.",
+     "start": 13.4,
+     "end": 13.72
+    }
+   ]
+  },
+  {
+   "text": "I started in threat intelligence and pen testing: Burp Suite, Ghidra, Wireshark, Nmap.",
+   "start": 14.48,
+   "end": 20.12,
+   "words": [
+    {
+     "w": "I",
+     "start": 14.48,
+     "end": 14.56
+    },
+    {
+     "w": "started",
+     "start": 14.6,
+     "end": 14.94
+    },
+    {
+     "w": "in",
+     "start": 14.96,
+     "end": 15.04
+    },
+    {
+     "w": "threat",
+     "start": 15.08,
+     "end": 15.32
+    },
+    {
+     "w": "intelligence",
+     "start": 15.32,
+     "end": 15.98
+    },
+    {
+     "w": "and",
+     "start": 16.02,
+     "end": 16.14
+    },
+    {
+     "w": "pen",
+     "start": 16.16,
+     "end": 16.36
+    },
+    {
+     "w": "testing:",
+     "start": 16.42,
+     "end": 16.72
+    },
+    {
+     "w": "Burp",
+     "start": 17.38,
+     "end": 17.62
+    },
+    {
+     "w": "Suite,",
+     "start": 17.7,
+     "end": 18.04
+    },
+    {
+     "w": "Ghidra,",
+     "start": 18.28,
+     "end": 18.66
+    },
+    {
+     "w": "Wireshark,",
+     "start": 18.96,
+     "end": 19.6
+    },
+    {
+     "w": "Nmap.",
+     "start": 19.8,
+     "end": 20.12
+    }
+   ]
+  },
+  {
+   "text": "Now I'm focused on AI security: prompt injection, jailbreaks, and attacking language models.",
+   "start": 20.76,
+   "end": 27.14,
+   "words": [
+    {
+     "w": "Now",
+     "start": 20.76,
+     "end": 20.96
+    },
+    {
+     "w": "I'm",
+     "start": 21.08,
+     "end": 21.22
+    },
+    {
+     "w": "focused",
+     "start": 21.28,
+     "end": 21.72
+    },
+    {
+     "w": "on",
+     "start": 21.76,
+     "end": 21.84
+    },
+    {
+     "w": "AI",
+     "start": 22.0,
+     "end": 22.26
+    },
+    {
+     "w": "security:",
+     "start": 22.34,
+     "end": 22.92
+    },
+    {
+     "w": "prompt",
+     "start": 23.54,
+     "end": 23.86
+    },
+    {
+     "w": "injection,",
+     "start": 23.92,
+     "end": 24.46
+    },
+    {
+     "w": "jailbreaks,",
+     "start": 24.78,
+     "end": 25.48
+    },
+    {
+     "w": "and",
+     "start": 25.7,
+     "end": 25.82
+    },
+    {
+     "w": "attacking",
+     "start": 25.82,
+     "end": 26.34
+    },
+    {
+     "w": "language",
+     "start": 26.36,
+     "end": 26.76
+    },
+    {
+     "w": "models.",
+     "start": 26.82,
+     "end": 27.14
+    }
+   ]
+  },
+  {
+   "text": "I designed WSH '26, our school's hackathon and CTF, with 30+ custom challenges.",
+   "start": 27.96,
+   "end": 35.36,
+   "words": [
+    {
+     "w": "I",
+     "start": 27.96,
+     "end": 28.02
+    },
+    {
+     "w": "designed",
+     "start": 28.08,
+     "end": 28.6
+    },
+    {
+     "w": "WSH",
+     "start": 29.02,
+     "end": 29.64
+    },
+    {
+     "w": "'26,",
+     "start": 29.72,
+     "end": 30.26
+    },
+    {
+     "w": "our",
+     "start": 30.88,
+     "end": 30.98
+    },
+    {
+     "w": "school's",
+     "start": 31.0,
+     "end": 31.4
+    },
+    {
+     "w": "hackathon",
+     "start": 31.42,
+     "end": 31.96
+    },
+    {
+     "w": "and",
+     "start": 32.0,
+     "end": 32.12
+    },
+    {
+     "w": "CTF,",
+     "start": 32.18,
+     "end": 32.96
+    },
+    {
+     "w": "with",
+     "start": 33.44,
+     "end": 33.6
+    },
+    {
+     "w": "30+",
+     "start": 33.72,
+     "end": 34.36
+    },
+    {
+     "w": "custom",
+     "start": 34.42,
+     "end": 34.78
+    },
+    {
+     "w": "challenges.",
+     "start": 34.86,
+     "end": 35.36
+    }
+   ]
+  },
+  {
+   "text": "I run a Raspberry Pi security homelab, wrote an A* Cambridge research paper, and rank in TryHackMe's top 35%.",
+   "start": 36.12,
+   "end": 45.16,
+   "words": [
+    {
+     "w": "I",
+     "start": 36.12,
+     "end": 36.18
+    },
+    {
+     "w": "run",
+     "start": 36.24,
+     "end": 36.42
+    },
+    {
+     "w": "a",
+     "start": 36.46,
+     "end": 36.52
+    },
+    {
+     "w": "Raspberry",
+     "start": 36.58,
+     "end": 37.18
+    },
+    {
+     "w": "Pi",
+     "start": 37.24,
+     "end": 37.48
+    },
+    {
+     "w": "security",
+     "start": 37.6,
+     "end": 38.1
+    },
+    {
+     "w": "homelab,",
+     "start": 38.14,
+     "end": 38.48
+    },
+    {
+     "w": "wrote",
+     "start": 39.1,
+     "end": 39.34
+    },
+    {
+     "w": "an",
+     "start": 39.36,
+     "end": 39.44
+    },
+    {
+     "w": "A*",
+     "start": 39.6,
+     "end": 40.08
+    },
+    {
+     "w": "Cambridge",
+     "start": 40.14,
+     "end": 40.68
+    },
+    {
+     "w": "research",
+     "start": 40.74,
+     "end": 41.22
+    },
+    {
+     "w": "paper,",
+     "start": 41.28,
+     "end": 41.56
+    },
+    {
+     "w": "and",
+     "start": 42.14,
+     "end": 42.26
+    },
+    {
+     "w": "rank",
+     "start": 42.28,
+     "end": 42.54
+    },
+    {
+     "w": "in",
+     "start": 42.6,
+     "end": 42.7
+    },
+    {
+     "w": "TryHackMe's",
+     "start": 42.76,
+     "end": 43.66
+    },
+    {
+     "w": "top",
+     "start": 43.7,
+     "end": 44.0
+    },
+    {
+     "w": "35%.",
+     "start": 44.1,
+     "end": 45.16
+    }
+   ]
+  },
+  {
+   "text": "And I'm open to internships in AI and offensive security.",
+   "start": 45.68,
+   "end": 49.24,
+   "words": [
+    {
+     "w": "And",
+     "start": 45.68,
+     "end": 45.8
+    },
+    {
+     "w": "I'm",
+     "start": 45.82,
+     "end": 45.96
+    },
+    {
+     "w": "open",
+     "start": 46.1,
+     "end": 46.34
+    },
+    {
+     "w": "to",
+     "start": 46.4,
+     "end": 46.5
+    },
+    {
+     "w": "internships",
+     "start": 46.58,
+     "end": 47.26
+    },
+    {
+     "w": "in",
+     "start": 47.32,
+     "end": 47.4
+    },
+    {
+     "w": "AI",
+     "start": 47.58,
+     "end": 47.88
+    },
+    {
+     "w": "and",
+     "start": 48.1,
+     "end": 48.2
+    },
+    {
+     "w": "offensive",
+     "start": 48.2,
+     "end": 48.68
+    },
+    {
+     "w": "security.",
+     "start": 48.7,
+     "end": 49.24
+    }
+   ]
+  },
+  {
+   "text": "Let's break something together.",
+   "start": 49.72,
+   "end": 51.14,
+   "words": [
+    {
+     "w": "Let's",
+     "start": 49.72,
+     "end": 49.96
+    },
+    {
+     "w": "break",
+     "start": 50.02,
+     "end": 50.24
+    },
+    {
+     "w": "something",
+     "start": 50.34,
+     "end": 50.72
+    },
+    {
+     "w": "together.",
+     "start": 50.74,
+     "end": 51.14
+    }
+   ]
+  }
+ ]
+}

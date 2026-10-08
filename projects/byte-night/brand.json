@@ -1,0 +1,10 @@
+{
+ "name": "Byte Night",
+ "handle": "byte night",
+ "url": "bytenight.example",
+ "colors": {
+  "ink": "#F3F0E8", "ink2": "#FFFFFF", "graphite": "#C9C3B6", "ash": "#77736B", "bone": "#16181D",
+  "signal": "#FF5A1F", "ember": "#FFB08A", "blood": "#C23A0A", "acid": "#1F6FFF"
+ },
+ "fonts": { "display": "Archivo-620", "mono": "Plex", "body": "PlexSans" }
+}

@@ -1,0 +1,14 @@
+{
+ "voice": { "engine": "kokoro", "voice": "af_heart", "speed": 0.94 },
+ "lead": 1.0,
+ "pronounce": { "Lumen": "Loo-men" },
+ "lines": [
+  { "id": "hook", "text": "Small things. Every day.", "pause": 0.7 },
+  { "id": "habits", "text": "That's how habits are built.", "pause": 0.6 },
+  { "id": "ring", "text": "Lumen turns your week into a ring of light.", "pause": 0.55 },
+  { "id": "grow", "text": "Each habit you keep makes it glow a little brighter.", "pause": 0.55 },
+  { "id": "miss", "text": "Miss a day, and it simply waits for you.", "pause": 0.7 },
+  { "id": "end", "text": "Lumen. Launching March third.", "pause": 2.8 }
+ ],
+ "plates": [["lumen", "hook"]]
+}

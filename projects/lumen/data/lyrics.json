@@ -1,0 +1,252 @@
+{
+ "source": "pipeline/align.py (wav2vec2 CTC)",
+ "lines": [
+  {
+   "text": "Small things. Every day.",
+   "start": 1.1,
+   "end": 2.46,
+   "words": [
+    {
+     "w": "Small",
+     "start": 1.1,
+     "end": 1.4
+    },
+    {
+     "w": "things.",
+     "start": 1.46,
+     "end": 1.82
+    },
+    {
+     "w": "Every",
+     "start": 2.04,
+     "end": 2.26
+    },
+    {
+     "w": "day.",
+     "start": 2.28,
+     "end": 2.46
+    }
+   ]
+  },
+  {
+   "text": "That's how habits are built.",
+   "start": 3.38,
+   "end": 4.54,
+   "words": [
+    {
+     "w": "That's",
+     "start": 3.38,
+     "end": 3.64
+    },
+    {
+     "w": "how",
+     "start": 3.64,
+     "end": 3.78
+    },
+    {
+     "w": "habits",
+     "start": 3.84,
+     "end": 4.2
+    },
+    {
+     "w": "are",
+     "start": 4.22,
+     "end": 4.34
+    },
+    {
+     "w": "built.",
+     "start": 4.34,
+     "end": 4.54
+    }
+   ]
+  },
+  {
+   "text": "Lumen turns your week into a ring of light.",
+   "start": 5.38,
+   "end": 7.66,
+   "words": [
+    {
+     "w": "Lumen",
+     "start": 5.38,
+     "end": 5.82
+    },
+    {
+     "w": "turns",
+     "start": 5.98,
+     "end": 6.24
+    },
+    {
+     "w": "your",
+     "start": 6.26,
+     "end": 6.4
+    },
+    {
+     "w": "week",
+     "start": 6.4,
+     "end": 6.56
+    },
+    {
+     "w": "into",
+     "start": 6.68,
+     "end": 6.88
+    },
+    {
+     "w": "a",
+     "start": 6.92,
+     "end": 6.98
+    },
+    {
+     "w": "ring",
+     "start": 7.04,
+     "end": 7.24
+    },
+    {
+     "w": "of",
+     "start": 7.26,
+     "end": 7.34
+    },
+    {
+     "w": "light.",
+     "start": 7.38,
+     "end": 7.66
+    }
+   ]
+  },
+  {
+   "text": "Each habit you keep makes it glow a little brighter.",
+   "start": 8.38,
+   "end": 10.72,
+   "words": [
+    {
+     "w": "Each",
+     "start": 8.38,
+     "end": 8.56
+    },
+    {
+     "w": "habit",
+     "start": 8.6,
+     "end": 8.9
+    },
+    {
+     "w": "you",
+     "start": 8.9,
+     "end": 9.02
+    },
+    {
+     "w": "keep",
+     "start": 9.06,
+     "end": 9.24
+    },
+    {
+     "w": "makes",
+     "start": 9.56,
+     "end": 9.78
+    },
+    {
+     "w": "it",
+     "start": 9.78,
+     "end": 9.86
+    },
+    {
+     "w": "glow",
+     "start": 9.86,
+     "end": 10.1
+    },
+    {
+     "w": "a",
+     "start": 10.14,
+     "end": 10.2
+    },
+    {
+     "w": "little",
+     "start": 10.2,
+     "end": 10.4
+    },
+    {
+     "w": "brighter.",
+     "start": 10.4,
+     "end": 10.72
+    }
+   ]
+  },
+  {
+   "text": "Miss a day, and it simply waits for you.",
+   "start": 11.46,
+   "end": 13.28,
+   "words": [
+    {
+     "w": "Miss",
+     "start": 11.46,
+     "end": 11.66
+    },
+    {
+     "w": "a",
+     "start": 11.66,
+     "end": 11.72
+    },
+    {
+     "w": "day,",
+     "start": 11.74,
+     "end": 11.96
+    },
+    {
+     "w": "and",
+     "start": 12.24,
+     "end": 12.36
+    },
+    {
+     "w": "it",
+     "start": 12.36,
+     "end": 12.44
+    },
+    {
+     "w": "simply",
+     "start": 12.46,
+     "end": 12.76
+    },
+    {
+     "w": "waits",
+     "start": 12.78,
+     "end": 13.04
+    },
+    {
+     "w": "for",
+     "start": 13.06,
+     "end": 13.18
+    },
+    {
+     "w": "you.",
+     "start": 13.18,
+     "end": 13.28
+    }
+   ]
+  },
+  {
+   "text": "Lumen. Launching March third.",
+   "start": 14.22,
+   "end": 15.84,
+   "words": [
+    {
+     "w": "Lumen.",
+     "start": 14.22,
+     "end": 14.66
+    },
+    {
+     "w": "Launching",
+     "start": 14.96,
+     "end": 15.32
+    },
+    {
+     "w": "March",
+     "start": 15.34,
+     "end": 15.58
+    },
+    {
+     "w": "third.",
+     "start": 15.62,
+     "end": 15.84
+    }
+   ]
+  }
+ ]
+}

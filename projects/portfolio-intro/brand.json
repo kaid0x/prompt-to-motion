@@ -1,0 +1,26 @@
+{
+ "name": "Muhammad Haseeb Ashfaq",
+ "handle": "kaido",
+ "url": "mhaseebashfaq.com",
+ "colors": {
+  "ink": "#0A0D12",
+  "ink2": "#12161F",
+  "graphite": "#2C3645",
+  "ash": "#8A94A2",
+  "bone": "#E7EAEF",
+  "signal": "#FF4044",
+  "ember": "#FF8A8C",
+  "blood": "#C8202B",
+  "acid": "#3DD68C"
+ },
+ "fonts": {
+  "display": "Chakra",
+  "mono": "JBM",
+  "body": "PlexSans"
+ },
+ "voice": {
+  "engine": "kokoro",
+  "voice": "am_michael",
+  "speed": 1.02
+ }
+}

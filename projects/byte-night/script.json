@@ -1,0 +1,15 @@
+{
+ "voice": { "engine": "kokoro", "voice": "bm_george", "speed": 1.0 },
+ "lead": 0.8,
+ "pronounce": {},
+ "lines": [
+  { "id": "hook", "text": "One night. Sixty teams. Zero sleep.", "pause": 0.55 },
+  { "id": "title", "text": "Byte Night 2026, in numbers.", "pause": 0.5 },
+  { "id": "students", "text": "120 students.", "pause": 0.45 },
+  { "id": "challenges", "text": "32 challenges across 7 categories.", "pause": 0.5 },
+  { "id": "flags", "text": "1,400 flags captured.", "pause": 0.5 },
+  { "id": "winner", "text": "And one winning team, by 4 points.", "pause": 0.6 },
+  { "id": "end", "text": "See you next year.", "pause": 2.6 }
+ ],
+ "plates": [["byte_night", "hook"]]
+}

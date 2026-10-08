@@ -1,0 +1,250 @@
+{
+ "source": "pipeline/align.py (wav2vec2 CTC)",
+ "lines": [
+  {
+   "text": "This video was never edited. It was written.",
+   "start": 0.84,
+   "end": 3.42,
+   "words": [
+    {
+     "w": "This",
+     "start": 0.84,
+     "end": 1.02
+    },
+    {
+     "w": "video",
+     "start": 1.08,
+     "end": 1.4
+    },
+    {
+     "w": "was",
+     "start": 1.5,
+     "end": 1.64
+    },
+    {
+     "w": "never",
+     "start": 1.72,
+     "end": 2.0
+    },
+    {
+     "w": "edited.",
+     "start": 2.12,
+     "end": 2.32
+    },
+    {
+     "w": "It",
+     "start": 2.86,
+     "end": 2.96
+    },
+    {
+     "w": "was",
+     "start": 2.98,
+     "end": 3.1
+    },
+    {
+     "w": "written.",
+     "start": 3.14,
+     "end": 3.42
+    }
+   ]
+  },
+  {
+   "text": "Every frame is code: a pure function of time.",
+   "start": 4.14,
+   "end": 6.94,
+   "words": [
+    {
+     "w": "Every",
+     "start": 4.14,
+     "end": 4.36
+    },
+    {
+     "w": "frame",
+     "start": 4.4,
+     "end": 4.7
+    },
+    {
+     "w": "is",
+     "start": 4.74,
+     "end": 4.84
+    },
+    {
+     "w": "code:",
+     "start": 4.88,
+     "end": 5.2
+    },
+    {
+     "w": "a",
+     "start": 5.68,
+     "end": 5.74
+    },
+    {
+     "w": "pure",
+     "start": 5.78,
+     "end": 6.06
+    },
+    {
+     "w": "function",
+     "start": 6.1,
+     "end": 6.42
+    },
+    {
+     "w": "of",
+     "start": 6.46,
+     "end": 6.54
+    },
+    {
+     "w": "time.",
+     "start": 6.56,
+     "end": 6.94
+    }
+   ]
+  },
+  {
+   "text": "The narration is the timeline. Each word cues the camera, the type, and the light.",
+   "start": 7.5,
+   "end": 12.38,
+   "words": [
+    {
+     "w": "The",
+     "start": 7.5,
+     "end": 7.6
+    },
+    {
+     "w": "narration",
+     "start": 7.62,
+     "end": 8.1
+    },
+    {
+     "w": "is",
+     "start": 8.2,
+     "end": 8.28
+    },
+    {
+     "w": "the",
+     "start": 8.32,
+     "end": 8.42
+    },
+    {
+     "w": "timeline.",
+     "start": 8.44,
+     "end": 9.04
+    },
+    {
+     "w": "Each",
+     "start": 9.66,
+     "end": 9.86
+    },
+    {
+     "w": "word",
+     "start": 9.9,
+     "end": 10.14
+    },
+    {
+     "w": "cues",
+     "start": 10.2,
+     "end": 10.5
+    },
+    {
+     "w": "the",
+     "start": 10.54,
+     "end": 10.66
+    },
+    {
+     "w": "camera,",
+     "start": 10.68,
+     "end": 11.14
+    },
+    {
+     "w": "the",
+     "start": 11.32,
+     "end": 11.44
+    },
+    {
+     "w": "type,",
+     "start": 11.46,
+     "end": 11.8
+    },
+    {
+     "w": "and",
+     "start": 11.88,
+     "end": 12.0
+    },
+    {
+     "w": "the",
+     "start": 12.0,
+     "end": 12.1
+    },
+    {
+     "w": "light.",
+     "start": 12.14,
+     "end": 12.38
+    }
+   ]
+  },
+  {
+   "text": "Write a script. Pick a voice. Render.",
+   "start": 12.96,
+   "end": 14.98,
+   "words": [
+    {
+     "w": "Write",
+     "start": 12.96,
+     "end": 13.16
+    },
+    {
+     "w": "a",
+     "start": 13.18,
+     "end": 13.24
+    },
+    {
+     "w": "script.",
+     "start": 13.24,
+     "end": 13.58
+    },
+    {
+     "w": "Pick",
+     "start": 13.64,
+     "end": 13.8
+    },
+    {
+     "w": "a",
+     "start": 13.82,
+     "end": 13.88
+    },
+    {
+     "w": "voice.",
+     "start": 13.9,
+     "end": 14.24
+    },
+    {
+     "w": "Render.",
+     "start": 14.6,
+     "end": 14.98
+    }
+   ]
+  },
+  {
+   "text": "Prompt to motion.",
+   "start": 15.58,
+   "end": 16.46,
+   "words": [
+    {
+     "w": "Prompt",
+     "start": 15.58,
+     "end": 15.9
+    },
+    {
+     "w": "to",
+     "start": 15.9,
+     "end": 16.02
+    },
+    {
+     "w": "motion.",
+     "start": 16.04,
+     "end": 16.46
+    }
+   ]
+  }
+ ]
+}

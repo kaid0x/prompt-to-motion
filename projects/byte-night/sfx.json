@@ -1,0 +1,180 @@
+{
+ "bed": {
+  "root": 58,
+  "gain": 0.2,
+  "intensity": [
+   [
+    0,
+    0.6
+   ],
+   [
+    "word:byte",
+    0.8
+   ],
+   [
+    "word:120",
+    0.9
+   ],
+   [
+    "word:1,400",
+    1.0
+   ],
+   [
+    "word:winning",
+    1.1
+   ],
+   [
+    "word:see",
+    0.8
+   ],
+   [
+    "end",
+    0.5
+   ]
+  ]
+ },
+ "pulse": {
+  "from": "word:byte",
+  "to": "word:see",
+  "bpm": 110,
+  "gain": 0.35
+ },
+ "hits": [
+  {
+   "at": "word:zero",
+   "gain": 1.0
+  },
+  {
+   "at": "word:120",
+   "gain": 0.9
+  },
+  {
+   "at": "word:32",
+   "gain": 0.9
+  },
+  {
+   "at": "word:1,400",
+   "gain": 0.9
+  },
+  {
+   "at": "word:4",
+   "gain": 1.4
+  }
+ ],
+ "swells": [
+  {
+   "to": "word:4",
+   "len": 1.8
+  }
+ ],
+ "cues": [
+  {
+   "at": "word:one",
+   "sfx": "hit_small",
+   "db": -14
+  },
+  {
+   "at": "word:sixty",
+   "sfx": "typing",
+   "db": -17
+  },
+  {
+   "at": "word:zero",
+   "sfx": "impact",
+   "db": -12,
+   "offset": -0.02
+  },
+  {
+   "at": "word:byte",
+   "sfx": "whoosh_soft",
+   "db": -13,
+   "offset": -0.3
+  },
+  {
+   "at": "word:byte",
+   "sfx": "stamp",
+   "db": -14
+  },
+  {
+   "at": "word:120",
+   "sfx": "whoosh_fast",
+   "db": -15,
+   "offset": -0.35
+  },
+  {
+   "at": "word:120",
+   "sfx": "typing",
+   "db": -18
+  },
+  {
+   "at": "wordend:students",
+   "sfx": "blip",
+   "db": -15
+  },
+  {
+   "at": "word:32",
+   "sfx": "whoosh_fast",
+   "db": -15,
+   "offset": -0.35
+  },
+  {
+   "at": "word:challenges",
+   "sfx": "tick",
+   "db": -15
+  },
+  {
+   "at": "word:across",
+   "sfx": "tick",
+   "db": -15
+  },
+  {
+   "at": "word:categories",
+   "sfx": "blip_low",
+   "db": -15
+  },
+  {
+   "at": "word:1,400",
+   "sfx": "whoosh_fast",
+   "db": -15,
+   "offset": -0.35
+  },
+  {
+   "at": "word:flags",
+   "sfx": "scan",
+   "db": -17
+  },
+  {
+   "at": "wordend:captured",
+   "sfx": "blip",
+   "db": -15
+  },
+  {
+   "at": "word:and",
+   "sfx": "whoosh_soft",
+   "db": -13,
+   "offset": -0.3
+  },
+  {
+   "at": "word:winning",
+   "sfx": "riser",
+   "db": -19
+  },
+  {
+   "at": "word:4",
+   "sfx": "impact",
+   "db": -9,
+   "offset": -0.02
+  },
+  {
+   "at": "word:4",
+   "sfx": "chime",
+   "db": -13
+  },
+  {
+   "at": "word:see",
+   "sfx": "whoosh_soft",
+   "db": -14,
+   "offset": -0.2
+  }
+ ]
+}

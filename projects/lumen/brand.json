@@ -1,0 +1,10 @@
+{
+ "name": "Lumen",
+ "handle": "lumen",
+ "url": "lumen.example",
+ "colors": {
+  "ink": "#041013", "ink2": "#0B1F24", "graphite": "#1E3A40", "ash": "#7FA3A6", "bone": "#EAF6F4",
+  "signal": "#38E0C8", "ember": "#B5FFF2", "blood": "#0F8F82", "acid": "#FFD27A"
+ },
+ "fonts": { "display": "Archivo-1125", "mono": "Plex", "body": "PlexSans" }
+}

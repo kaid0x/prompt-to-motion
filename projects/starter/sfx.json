@@ -1,0 +1,166 @@
+{
+ "bed": {
+  "root": 49,
+  "gain": 0.22,
+  "intensity": [
+   [
+    0,
+    0.6
+   ],
+   [
+    "word:written",
+    0.9
+   ],
+   [
+    "word:narration",
+    1.0
+   ],
+   [
+    "word:prompt",
+    1.1
+   ],
+   [
+    "end",
+    0.5
+   ]
+  ]
+ },
+ "pulse": {
+  "from": "word:narration",
+  "to": "word:prompt",
+  "bpm": 96,
+  "gain": 0.35
+ },
+ "hits": [
+  {
+   "at": "word:written",
+   "gain": 1.4
+  },
+  {
+   "at": "word:motion",
+   "gain": 1.6
+  }
+ ],
+ "swells": [
+  {
+   "to": "word:written",
+   "len": 2.0
+  },
+  {
+   "to": "word:motion",
+   "len": 2.0
+  }
+ ],
+ "cues": [
+  {
+   "at": 0.2,
+   "sfx": "reverse",
+   "db": -18
+  },
+  {
+   "at": "word:edited",
+   "sfx": "hit_small",
+   "db": -14
+  },
+  {
+   "at": "word:written",
+   "sfx": "impact",
+   "db": -10,
+   "offset": -0.02
+  },
+  {
+   "at": "word:written",
+   "sfx": "shatter",
+   "db": -18
+  },
+  {
+   "at": "word:every",
+   "sfx": "whoosh_soft",
+   "db": -14,
+   "offset": -0.3
+  },
+  {
+   "at": "word:code",
+   "sfx": "typing",
+   "db": -19
+  },
+  {
+   "at": "word:narration",
+   "sfx": "whoosh_soft",
+   "db": -13,
+   "offset": -0.3
+  },
+  {
+   "at": "word:camera",
+   "sfx": "blip",
+   "db": -13
+  },
+  {
+   "at": "word:camera",
+   "sfx": "whoosh_fast",
+   "db": -18,
+   "offset": -0.3
+  },
+  {
+   "at": "word:type",
+   "sfx": "blip_low",
+   "db": -13
+  },
+  {
+   "at": "word:type",
+   "sfx": "whoosh_fast",
+   "db": -18,
+   "offset": -0.3
+  },
+  {
+   "at": "word:light",
+   "sfx": "blip",
+   "db": -13
+  },
+  {
+   "at": "word:light",
+   "sfx": "whoosh_fast",
+   "db": -18,
+   "offset": -0.3
+  },
+  {
+   "at": "word:write",
+   "sfx": "whoosh_fast",
+   "db": -15,
+   "offset": -0.3
+  },
+  {
+   "at": "word:script",
+   "sfx": "tick",
+   "db": -14
+  },
+  {
+   "at": "word:voice",
+   "sfx": "tick",
+   "db": -14
+  },
+  {
+   "at": "word:render",
+   "sfx": "chime",
+   "db": -13
+  },
+  {
+   "at": "word:prompt",
+   "sfx": "whoosh_soft",
+   "db": -13,
+   "offset": -0.4
+  },
+  {
+   "at": "word:motion",
+   "sfx": "impact",
+   "db": -8,
+   "offset": -0.02
+  },
+  {
+   "at": "word:motion",
+   "sfx": "shatter",
+   "db": -14,
+   "offset": 0.04
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "voice": {
+  "engine": "kokoro",
+  "voice": "am_michael",
+  "speed": 1.02
+ },
+ "lead": 0.9,
+ "pronounce": {},
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Most people use systems. I break them, to see how they hold together.",
+   "pause": 0.55
+  },
+  {
+   "id": "name",
+   "text": "I'm Muhammad Haseeb Ashfaq. Online, I'm Kaido.",
+   "pause": 0.35
+  },
+  {
+   "id": "who",
+   "text": "A Year 13 student in Dubai, where offensive security meets AI.",
+   "pause": 0.5
+  },
+  {
+   "id": "tools",
+   "text": "I started in threat intelligence and pen testing: Burp Suite, Ghidra, Wireshark, Nmap.",
+   "pause": 0.4
+  },
+  {
+   "id": "ai",
+   "text": "Now I'm focused on AI security: prompt injection, jailbreaks, and attacking language models.",
+   "pause": 0.5
+  },
+  {
+   "id": "wsh",
+   "text": "I designed WSH '26, our school's hackathon and CTF, with 30+ custom challenges.",
+   "pause": 0.45
+  },
+  {
+   "id": "more",
+   "text": "I run a Raspberry Pi security homelab, wrote an A* Cambridge research paper, and rank in TryHackMe's top 35%.",
+   "pause": 0.5
+  },
+  {
+   "id": "open",
+   "text": "And I'm open to internships in AI and offensive security.",
+   "pause": 0.35
+  },
+  {
+   "id": "end",
+   "text": "Let's break something together.",
+   "pause": 2.4
+  }
+ ],
+ "plates": [
+  [
+   "portfolio_intro",
+   "hook"
+  ]
+ ]
+}

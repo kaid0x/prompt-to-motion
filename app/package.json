@@ -1,0 +1,26 @@
+{
+  "name": "prompt-to-motion",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/opentype.js": "^1.3.10",
+    "@types/three": "^0.186.0",
+    "playwright-core": "^1.63.0",
+    "vite": "^8.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "opentype.js": "^2.0.0",
+    "three": "^0.186.0"
+  },
+  "scripts": {
+    "dev": "vite --port 5173",
+    "render": "bun scripts/render.ts video --fps 30 --samples 1 --crf 17",
+    "render:hq": "bun scripts/render.ts video --fps 60 --samples auto --min-samples 4 --max-samples 12 --shutter 0.5 --crf 16",
+    "sheet": "bun scripts/render.ts sheet --n 12 --cols 4"
+  }
+}

@@ -1,0 +1,409 @@
+{
+ "bed": {
+  "root": 55,
+  "gain": 0.22,
+  "intensity": [
+   [
+    0,
+    0.55
+   ],
+   [
+    5,
+    0.7
+   ],
+   [
+    14,
+    0.8
+   ],
+   [
+    20,
+    0.9
+   ],
+   [
+    28,
+    1.0
+   ],
+   [
+    36,
+    0.9
+   ],
+   [
+    45,
+    1.0
+   ],
+   [
+    49.6,
+    1.1
+   ],
+   [
+    50.2,
+    0.8
+   ],
+   [
+    "end",
+    0.5
+   ]
+  ]
+ },
+ "pulse": {
+  "from": "word:started",
+  "to": "word:and#4",
+  "bpm": 92,
+  "gain": 0.35
+ },
+ "hits": [
+  {
+   "at": "word:break",
+   "gain": 1.4
+  },
+  {
+   "at": "word:wsh",
+   "gain": 1.1
+  },
+  {
+   "at": "word:30+",
+   "gain": 0.9
+  },
+  {
+   "at": "word:a*",
+   "gain": 1.0
+  },
+  {
+   "at": "word:open",
+   "gain": 0.9
+  },
+  {
+   "at": "word:break#1",
+   "gain": 1.6
+  }
+ ],
+ "swells": [
+  {
+   "to": "word:break",
+   "len": 2.2
+  },
+  {
+   "to": "word:wsh",
+   "len": 1.6
+  },
+  {
+   "to": "word:break#1",
+   "len": 2.4
+  }
+ ],
+ "cues": [
+  {
+   "at": 0.2,
+   "sfx": "reverse",
+   "db": -18
+  },
+  {
+   "at": "word:break",
+   "sfx": "impact",
+   "db": -10,
+   "offset": -0.02
+  },
+  {
+   "at": "word:break",
+   "sfx": "zap",
+   "db": -14,
+   "offset": 0.02
+  },
+  {
+   "at": "word:hold",
+   "sfx": "reverse",
+   "db": -17,
+   "offset": 0.1
+  },
+  {
+   "at": "word:muhammad",
+   "sfx": "whoosh_soft",
+   "db": -14,
+   "offset": -0.4
+  },
+  {
+   "at": "word:muhammad",
+   "sfx": "typing",
+   "db": -20
+  },
+  {
+   "at": "word:kaido",
+   "sfx": "blip",
+   "db": -14,
+   "offset": -0.1
+  },
+  {
+   "at": 9.9,
+   "sfx": "whoosh_fast",
+   "db": -15
+  },
+  {
+   "at": "word:year",
+   "sfx": "typing",
+   "db": -19,
+   "offset": -0.3
+  },
+  {
+   "at": "word:dubai",
+   "sfx": "scan",
+   "db": -15
+  },
+  {
+   "at": "word:offensive",
+   "sfx": "typing",
+   "db": -20
+  },
+  {
+   "at": 14.6,
+   "sfx": "whoosh_soft",
+   "db": -13
+  },
+  {
+   "at": "word:burp",
+   "sfx": "blip",
+   "db": -13,
+   "offset": -0.05
+  },
+  {
+   "at": "word:burp",
+   "sfx": "whoosh_fast",
+   "db": -19,
+   "offset": -0.3
+  },
+  {
+   "at": "word:ghidra",
+   "sfx": "blip_low",
+   "db": -13,
+   "offset": -0.05
+  },
+  {
+   "at": "word:ghidra",
+   "sfx": "whoosh_fast",
+   "db": -19,
+   "offset": -0.3
+  },
+  {
+   "at": "word:wireshark",
+   "sfx": "blip",
+   "db": -13,
+   "offset": -0.05
+  },
+  {
+   "at": "word:wireshark",
+   "sfx": "whoosh_fast",
+   "db": -19,
+   "offset": -0.3
+  },
+  {
+   "at": "word:nmap",
+   "sfx": "blip_low",
+   "db": -13,
+   "offset": -0.05
+  },
+  {
+   "at": "word:nmap",
+   "sfx": "whoosh_fast",
+   "db": -19,
+   "offset": -0.3
+  },
+  {
+   "at": 20.5,
+   "sfx": "whoosh_soft",
+   "db": -13
+  },
+  {
+   "at": "word:prompt",
+   "sfx": "zap",
+   "db": -13,
+   "offset": -0.05
+  },
+  {
+   "at": "wordend:injection",
+   "sfx": "glitch",
+   "db": -18,
+   "offset": 0.2
+  },
+  {
+   "at": "word:jailbreaks",
+   "sfx": "hit_small",
+   "db": -11
+  },
+  {
+   "at": "word:jailbreaks",
+   "sfx": "shatter",
+   "db": -18,
+   "offset": 0.05
+  },
+  {
+   "at": "word:attacking",
+   "sfx": "glitch",
+   "db": -10
+  },
+  {
+   "at": "word:designed",
+   "sfx": "whoosh_fast",
+   "db": -14,
+   "offset": -0.3
+  },
+  {
+   "at": "word:wsh",
+   "sfx": "hit_small",
+   "db": -11
+  },
+  {
+   "at": 28.3,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 28.687,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 29.074,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 29.461,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 29.849,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 30.236,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 30.623,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 31.01,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 31.397,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 31.784,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 32.171,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 32.559,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 32.946,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": 33.333,
+   "sfx": "tick",
+   "db": -20
+  },
+  {
+   "at": "word:30+",
+   "sfx": "chime",
+   "db": -15
+  },
+  {
+   "at": "word:raspberry",
+   "sfx": "whoosh_fast",
+   "db": -14,
+   "offset": -0.2
+  },
+  {
+   "at": "word:raspberry",
+   "sfx": "tick",
+   "db": -17,
+   "offset": 0.8
+  },
+  {
+   "at": "word:wrote",
+   "sfx": "whoosh_fast",
+   "db": -14,
+   "offset": -0.1
+  },
+  {
+   "at": "word:wrote",
+   "sfx": "whoosh_soft",
+   "db": -15,
+   "offset": 0.2
+  },
+  {
+   "at": "word:a*",
+   "sfx": "stamp",
+   "db": -9,
+   "offset": 0.12
+  },
+  {
+   "at": "word:and#3",
+   "sfx": "whoosh_fast",
+   "db": -14,
+   "offset": -0.1
+  },
+  {
+   "at": "word:tryhackme",
+   "sfx": "scan",
+   "db": -16
+  },
+  {
+   "at": "word:35%",
+   "sfx": "blip",
+   "db": -13,
+   "offset": 0.2
+  },
+  {
+   "at": "word:open",
+   "sfx": "whoosh_soft",
+   "db": -13,
+   "offset": -0.4
+  },
+  {
+   "at": "word:open",
+   "sfx": "chime",
+   "db": -10
+  },
+  {
+   "at": "word:break#1",
+   "sfx": "impact",
+   "db": -8,
+   "offset": -0.02
+  },
+  {
+   "at": "word:break#1",
+   "sfx": "shatter",
+   "db": -13,
+   "offset": 0.04
+  },
+  {
+   "at": 51.4,
+   "sfx": "riser",
+   "db": -20
+  },
+  {
+   "at": 51.55,
+   "sfx": "typing",
+   "db": -20
+  }
+ ]
+}

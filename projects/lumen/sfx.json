@@ -1,0 +1,104 @@
+{
+ "bed": {
+  "root": 46,
+  "gain": 0.26,
+  "intensity": [
+   [
+    0,
+    0.5
+   ],
+   [
+    "word:lumen",
+    0.8
+   ],
+   [
+    "word:each",
+    1.0
+   ],
+   [
+    "word:miss",
+    0.7
+   ],
+   [
+    "word:lumen#1",
+    1.2
+   ],
+   [
+    "end",
+    0.6
+   ]
+  ]
+ },
+ "hits": [
+  {
+   "at": "word:lumen#1",
+   "gain": 0.9
+  }
+ ],
+ "swells": [
+  {
+   "to": "word:lumen#1",
+   "len": 2.6
+  }
+ ],
+ "cues": [
+  {
+   "at": "word:small",
+   "sfx": "chime",
+   "db": -22
+  },
+  {
+   "at": "word:lumen",
+   "sfx": "whoosh_soft",
+   "db": -18,
+   "offset": -0.2
+  },
+  {
+   "at": "word:each",
+   "sfx": "chime",
+   "db": -20,
+   "offset": 0.4
+  },
+  {
+   "at": "word:keep",
+   "sfx": "chime",
+   "db": -20,
+   "offset": 0.4
+  },
+  {
+   "at": "word:glow",
+   "sfx": "chime",
+   "db": -19,
+   "offset": 0.4
+  },
+  {
+   "at": "word:brighter",
+   "sfx": "chime",
+   "db": -18,
+   "offset": 0.4
+  },
+  {
+   "at": "word:simply",
+   "sfx": "chime",
+   "db": -20,
+   "offset": 0.4
+  },
+  {
+   "at": "word:waits",
+   "sfx": "chime",
+   "db": -20,
+   "offset": 0.4
+  },
+  {
+   "at": "word:lumen#1",
+   "sfx": "chime",
+   "db": -12,
+   "offset": 0.15
+  },
+  {
+   "at": "word:launching",
+   "sfx": "blip_low",
+   "db": -18
+  }
+ ]
+}
